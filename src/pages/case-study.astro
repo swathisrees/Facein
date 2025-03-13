@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+---
+
+<Layout title="Academy - Learn with Us">
+  <Header />
+  <main>
+    <HeroSection 
+      title="Welcome to Our Academy" 
+      highlightText="Academy"
+      description="Empower your future with industry-leading courses and expert guidance."
+    />
+
+    <!-- Featured Courses Section -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">Our Featured Courses</h2>
+
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- Course 1 -->
+          <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Full-Stack Web Development</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Learn the latest web technologies and build powerful web applications.
+            </p>
+            <ul class="text-gray-700 dark:text-gray-300 mb-6">
+              <li>✅ Frontend & Backend Development</li>
+              <li>✅ Hands-on Projects</li>
+              <li>✅ Industry-Recognized Certification</li>
+            </ul>
+            <a href="#" class="btn-outline-neon">View Course</a>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Cybersecurity & Ethical Hacking</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Master cybersecurity techniques and become an ethical hacker.
+            </p>
+            <ul class="text-gray-700 dark:text-gray-300 mb-6">
+              <li>✅ Penetration Testing</li>
+              <li>✅ Real-World Scenarios</li>
+              <li>✅ Certified Training</li>
+            </ul>
+            <a href="#" class="btn-outline-neon">View Course</a>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">AI & Machine Learning</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Dive into the world of AI and build intelligent systems.
+            </p>
+            <ul class="text-gray-700 dark:text-gray-300 mb-6">
+              <li>✅ Deep Learning & Neural Networks</li>
+              <li>✅ Hands-on Projects</li>
+              <li>✅ Expert Mentorship</li>
+            </ul>
+            <a href="#" class="btn-outline-neon">View Course</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Success Stories -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-900">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">Student Success Stories</h2>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Story 1 -->
+          <div class="flex items-center gap-6">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Student Success" class="w-24 h-24 rounded-full shadow-lg" />
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Alex Johnson</h3>
+              <p class="text-gray-600 dark:text-gray-300">"The cybersecurity course gave me the skills I needed to land a job at a top firm!"</p>
+            </div>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="flex items-center gap-6">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Student Success" class="w-24 h-24 rounded-full shadow-lg" />
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Sophia Williams</h3>
+              <p class="text-gray-600 dark:text-gray-300">"I built my own AI model thanks to the Academy’s expert-led training."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+      <div class="container-custom text-center">
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Start Your Learning Journey Today!</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          Join thousands of students who are upskilling with our expert-led courses.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/courses" class="btn-primary">Explore Courses</a>
+          <a href="/contact" class="btn-outline-neon">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

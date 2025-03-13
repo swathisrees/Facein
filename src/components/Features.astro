@@ -1,0 +1,188 @@
+---
+const features = [
+ {
+    title: "Intuitive Dashboard",
+    description: "Get a comprehensive overview of your business with our easy-to-use dashboard that displays all critical metrics at a glance.",
+    icon: "M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2",
+    color: "primary"
+  },
+  {
+    title: "Advanced Analytics",
+    description: "Make data-driven decisions with our powerful analytics tools that provide deep insights into your business performance.",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+    color: "secondary"
+  },
+  {
+    title: "Team Collaboration",
+    description: "Enhance productivity with real-time collaboration tools that keep your team connected and projects moving forward.",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+    color: "accent"
+  },
+  {
+    title: "Automated Workflows",
+    description: "Save time and reduce errors with customizable automation that streamlines your business processes.",
+    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
+    color: "warning"
+  },
+  {
+    title: "Secure Data Storage",
+    description: "Keep your sensitive information protected with enterprise-grade security and compliance features.",
+    icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+    color: "primary"
+  },
+  {
+    title: "Mobile Accessibility",
+    description: "Access your workspace from anywhere with fully responsive design optimized for all devices.",
+    icon: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z",
+    color: "secondary"
+  }
+]
+---
+<!-- Infinite Scrolling Partner Logos -->
+<div class="relative w-full  bg-gray-900/80 dark:bg-gray-950/90  backdrop-saturate-150 rounded-xl shadow-lg py-10 overflow-hidden">
+  <div class="logo-slider flex w-max space-x-12 animate-scroll">
+    <!-- Repeat the logos for infinite effect -->
+    <div class="h-8 flex ">
+      <img src="https://via.placeholder.com/100x30?text=Google" alt="Google" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Apple" alt="Apple" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Beebole" alt="Beebole" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Deliverect" alt="Deliverect" class="h-8">
+    </div>
+
+    <!-- Duplicate logos for seamless infinite scroll -->
+    <div class="h-8 flex ">
+      <img src="https://via.placeholder.com/100x30?text=Google" alt="Google" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Apple" alt="Apple" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Beebole" alt="Beebole" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Deliverect" alt="Deliverect" class="h-8">
+    </div>
+    <div class="h-8 flex ">
+      <img src="https://via.placeholder.com/100x30?text=Google" alt="Google" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Apple" alt="Apple" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Beebole" alt="Beebole" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Deliverect" alt="Deliverect" class="h-8">
+    </div>
+  </div>
+</div>
+
+<section id="features" class="section bg-gray-900/80 dark:bg-gray-950/90 relative overflow-hidden">
+  <!-- Neon Glow Background Overlay -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-10 left-20 w-96 h-96 bg-primary-500 blur-[120px] opacity-20"></div>
+    <div class="absolute bottom-20 right-20 w-80 h-80 bg-indigo-500 blur-[100px] opacity-15"></div>
+  </div>
+
+  <div class="container-custom relative">
+    <!-- Title -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+    
+      <h2 class="mb-6 text-white text-4xl font-extrabold tracking-wide">
+        Elevate Your Experience
+      </h2>
+      <p class="text-gray-400 text-lg">
+        Explore an innovative ecosystem designed for growth, efficiency, and seamless automation.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+  {[
+    {
+      title: "AI Solutions",
+      description:
+        "We develop AI-powered applications, chatbots, automation systems, and predictive analytics to drive business growth and efficiency.",
+      icon: "M3 10h11M9 21V3m8 7h4m-2-2v4", // Adjust with actual AI icon
+      color: "blue",
+    },
+    {
+      title: "Software Development",
+      description:
+        "Custom software solutions tailored for businesses, including SaaS applications, enterprise tools, and scalable platforms.",
+      icon: "M12 4v16m-7-7h14", // Adjust with actual software icon
+      color: "purple",
+    },
+    {
+      title: "Web Development",
+      description:
+        "Creating dynamic websites, web apps, and eCommerce solutions optimized for performance, security, and user experience.",
+      icon: "M3 3h18M3 9h18M3 15h18M3 21h18", // Adjust with actual web dev icon
+      color: "green",
+    },
+    {
+      title: "IT Support & Services",
+      description:
+        "24/7 IT support, cloud solutions, network management, and troubleshooting to keep businesses running smoothly.",
+      icon: "M9 12h6m-3-3v6", // Adjust with actual IT support icon
+      color: "yellow",
+    },
+    {
+      title: "IoT Solutions",
+      description:
+        "Smart IoT applications, device integrations, and automation solutions for industries and businesses.",
+      icon: "M12 3v18m-6-6h12", // Adjust with actual IoT icon
+      color: "pink",
+    },
+    {
+      title: "Cybersecurity Consulting",
+      description:
+        "End-to-end cybersecurity solutions, VAPT, compliance, and risk assessments to protect businesses from cyber threats.",
+      icon: "M4 6h16M4 12h16m-7-6v12", // Adjust with actual security icon
+      color: "red",
+    },
+  ].map((feature, index) => (
+    <div
+      key={index}
+      class="group card relative p-6 backdrop-blur-lg border border-gray-600/30 bg-gray-800/30 dark:border-gray-700/40 rounded-xl transition-transform hover:-translate-y-2 hover:shadow-neon slide-up"
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      <!-- Icon with Neon Glow -->
+      <div class="relative w-14 h-14 rounded-lg bg-gray-700/40 flex items-center justify-center mb-6 transition-all group-hover:shadow-neon">
+        <svg
+          class={`w-8 h-8 text-${feature.color}-400`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon}></path>
+        </svg>
+        <span class={`absolute inset-0 animate-pulse bg-${feature.color}-400/20 rounded-lg blur-lg opacity-40`}></span>
+      </div>
+
+      <!-- Feature Title & Description -->
+      <h3 class="text-2xl font-semibold mb-3 text-white group-hover:text-primary-400 transition-all">
+        {feature.title}
+      </h3>
+      <p class="text-gray-400 group-hover:text-gray-300 transition-all">
+        {feature.description}
+      </p>
+    </div>
+  ))}
+</div>
+
+    <!-- CTA Button -->
+    <div class="mt-16 text-center">
+      <a href="/services" class="btn-outline-neon">
+        Learn More 
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+<section class="relative pt-32 pb-20 md:pt-40 overflow-hidden hero-section bg-gray-900/80 dark:bg-gray-950/90  backdrop-saturate-150 rounded-xl shadow-lg">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-10 left-20 w-96 h-96 bg-primary-500 blur-[120px] opacity-20"></div>
+    <div class="absolute bottom-20 right-20 w-80 h-80 bg-indigo-500 blur-[100px] opacity-15"></div>
+  </div>
+  <div class="container-custom relative z-10">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="slide-up" transition:animate="slide">
+        <h1 class="mb-6 text-secondary-900 dark:text-white leading-tight">
+          <span class="text-primary-600 dark:text-primary-400">Ultimate</span> coding solution<br>
+          for your business.
+        </h1>
+        <p class="text-xl text-secondary-600 dark:text-secondary-300 mb-8 max-w-lg">
+          We craft innovative tech solutions, provide expert consulting, and empower teams through training. Our three pillars—  
+          <span class="font-bold text-orange-500">Code</span> for development,  
+          <span class="font-bold text-orange-600">Consult</span> for strategy, and  
+          <span class="font-bold text-orange-700">Coach</span> for growth—help businesses and individuals thrive in a dynamic digital world.
+        </p>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="btn-outline-neon">
+            Get in Touch
+          </a>
+          <a href="/company"  class="btn-outline-neon">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="relative black">
+        <!-- Animated Metal JPG Image -->
+        <div class="w-full max-w-lg mx-auto">
+            <img src="/src/assets/metal.png" alt="3D Metal Object" class="w-full h-auto drop-shadow-xl animate-float">
+        </div>
+    </div>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</section>
+<style>
+  img {
+    
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+</style>
+
