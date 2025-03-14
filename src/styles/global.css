@@ -22,10 +22,16 @@
   h4 {
     @apply text-xl md:text-2xl font-semibold;
   }
+
+  h5 {
+    @apply text-6xl md:text-7xl lg:text-8xl font-bold;
+  }
   
   p {
     @apply text-base md:text-lg leading-relaxed;
   }
+
+
 }
 
 @layer components {
@@ -160,7 +166,31 @@
 
 
   
-  
 
- 
+  @keyframes floatAround {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0.9; }
+  25% { transform: translate(20px, -25px) rotate(45deg); opacity: 0.6; }
+  50% { transform: translate(-15px, 30px) rotate(90deg); opacity: 0.8; }
+  75% { transform: translate(10px, -20px) rotate(135deg); opacity: 0.7; }
+  100% { transform: translate(0, 0) rotate(180deg); opacity: 1; }
+}
+
   
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(4px);
+    animation: floatAround 5s linear infinite alternate;
+  }
+  
+  .particle:nth-child(1) { width: 6px; height: 6px; top: 30%; left: 20%; animation: floatAround 4s infinite linear; }
+  .particle:nth-child(2) { width: 8px; height: 8px; top: 40%; left: 60%; animation: floatAround 4s infinite linear; }
+  .particle:nth-child(3) { width: 9px; height:9px; bottom: 20%; right: 20%; animation: floatAround 4s infinite linear; }
+  .particle:nth-child(4) { width: 7px; height: 7px; top: 15%; right: 30%; animation: floatAround 4s infinite linear; }
+  .particle:nth-child(5) { width: 6px; height: 6px; bottom: 30%; left: 40%; animation: floatAround 4s infinite linear; }
+  
+  .animated-svg {
+    width: auto;
+    position: relative;
+    z-index: 10;
+  }
