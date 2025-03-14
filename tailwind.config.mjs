@@ -5,6 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
+
         primary: {
           50: '#fff7f3',
           100: '#ffe7db',
@@ -59,6 +60,7 @@ export default {
         },
         black: "#000000",
         white: "#FFFFFF",
+        neonOrange: '#FF9100',
         transparentOrange: {
           50: 'rgba(255, 97, 8, 0.05)',
           100: 'rgba(255, 97, 8, 0.10)',

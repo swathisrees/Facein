@@ -1,16 +1,19 @@
----
----
-<section id="signup" class=" bg-gray-900/80 dark:bg-gray-950/90  backdrop-saturate-150 rounded-xl shadow-lg">
-  <div class="container-custom max-w-4xl ">
-    <div class="card p-8 md:p-12 border border-gray-200 dark:border-gray-700">
+<section id="signup" class="relative bg-gray-900/80 dark:bg-gray-950/90 backdrop-blur-lg backdrop-saturate-150 rounded-2xl shadow-[0_0_20px_#FF6108] p-8 transition-all hover:shadow-[0_0_30px_#FF6108]">
+  <div class="container-custom max-w-4xl">
+    
+
+      <!-- Neon Glow Effect -->
+      <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-purple-500/10 opacity-10 blur-xl rounded-lg"></div>
+
       <div class="text-center mb-8">
-        <h2 class="mb-4 text-gray-900 dark:text-white">Stay Updated</h2>
-        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Subscribe to our newsletter to receive the latest updates, tips, and exclusive offers.
+        <h2 class="mb-4 text-3xl font-bold text-white tracking-wide">🚀 Stay Ahead</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Subscribe for the latest updates, exclusive offers, and tech insights delivered to your inbox.
         </p>
       </div>
-      
-      <form class="max-w-xl mx-auto" x-data="{ email: '', submitted: false, error: '' }">
+
+      <!-- Subscription Form -->
+      <form class="max-w-xl mx-auto relative z-10" x-data="{ email: '', submitted: false, error: '' }">
         <div class="relative" x-show="!submitted">
           <div class="flex flex-col sm:flex-row gap-4">
             <div class="flex-grow">
@@ -20,14 +23,14 @@
                 id="email" 
                 x-model="email"
                 placeholder="Enter your email" 
-                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+                class="w-full px-4 py-3 rounded-lg border border-gray-500/40 bg-gray-800/40 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all shadow-md hover:shadow-lg"
                 required
               />
               <p class="text-red-500 text-sm mt-1" x-show="error" x-text="error"></p>
             </div>
             <button 
               type="submit" 
-              class="btn-outline-neon"
+              class="px-6 py-3 rounded-lg font-semibold text-white bg-orange-500 hover:bg-orange-600 transition-all shadow-[0_0_15px_#FF6108] hover:shadow-[0_0_20px_#FF6108]"
               x-on:click.prevent="
                 if (!email) {
                   error = 'Please enter your email';
@@ -41,24 +44,26 @@
                 submitted = true;
               "
             >
-              Subscribe Now
+              🚀 Subscribe Now
             </button>
           </div>
         </div>
         
-        <div class="text-center p-6 bg-primary-50 dark:bg-primary-900/30 rounded-lg" x-show="submitted" x-cloak>
-          <svg class="w-12 h-12 text-primary-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <!-- Success Message -->
+        <div class="text-center p-6 bg-gray-800/40 border border-gray-500/40 rounded-lg animate-fade-in" x-show="submitted" x-cloak>
+          <svg class="w-12 h-12 text-orange-400 mx-auto mb-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Thank You for Subscribing!</h3>
-          <p class="text-gray-600 dark:text-gray-300">
-            You've been added to our newsletter. We'll keep you updated with the latest news and offers.
+          <h3 class="text-xl font-semibold text-white mb-2">🔥 You're In!</h3>
+          <p class="text-gray-400">
+            You've been added to our exclusive newsletter. Get ready for amazing updates!
           </p>
         </div>
       </form>
-      
-      <div class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-        By subscribing, you agree to our <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Privacy Policy</a> and <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Terms of Service</a>.
+
+      <!-- Terms & Privacy -->
+      <div class="mt-8 text-center text-sm text-gray-500">
+        By subscribing, you agree to our <a href="#" class="text-orange-400 hover:underline">Privacy Policy</a> and <a href="#" class="text-orange-400 hover:underline">Terms of Service</a>.
       </div>
     </div>
   </div>

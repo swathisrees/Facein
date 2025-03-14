@@ -1,0 +1,148 @@
+<!-- Infinite Scrolling Partner Logos -->
+<div class="relative w-full  bg-gray-900/80 dark:bg-gray-950/90  backdrop-saturate-150 rounded-xl shadow-lg py-10 overflow-hidden">
+  <div class="logo-slider flex w-max space-x-12 animate-scroll">
+    <!-- Repeat the logos for infinite effect -->
+    <div class="h-8 flex ">
+      <img src="https://via.placeholder.com/100x30?text=Google" alt="Google" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Apple" alt="Apple" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Beebole" alt="Beebole" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Deliverect" alt="Deliverect" class="h-8">
+    </div>
+
+    <!-- Duplicate logos for seamless infinite scroll -->
+    <div class="h-8 flex ">
+      <img src="https://via.placeholder.com/100x30?text=Google" alt="Google" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Apple" alt="Apple" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Beebole" alt="Beebole" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Deliverect" alt="Deliverect" class="h-8">
+    </div>
+    <div class="h-8 flex ">
+      <img src="https://via.placeholder.com/100x30?text=Google" alt="Google" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Apple" alt="Apple" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Beebole" alt="Beebole" class="h-8">
+    </div>
+    <div class="h-8 flex items-center">
+      <img src="https://via.placeholder.com/100x30?text=Deliverect" alt="Deliverect" class="h-8">
+    </div>
+  </div>
+</div>
+
+<section id="features" class="section bg-gray-900/80 dark:bg-gray-950/90 relative overflow-hidden">
+  <!-- Neon Glow Background Overlay -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-10 left-20 w-96 h-96 bg-primary-500 blur-[120px] opacity-20"></div>
+    <div class="absolute bottom-20 right-20 w-80 h-80 bg-indigo-500 blur-[100px] opacity-15"></div>
+  </div>
+
+  <div class="container-custom relative">
+    <!-- Title -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+    
+      <h2 class="mb-6 text-white text-4xl font-extrabold tracking-wide">
+        Our Expertise
+      </h2>
+      <p class="text-gray-400 text-lg">
+        Explore an innovative workspace designed for Coding , Consulting, and Coaching.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {[
+        {
+          title: "AI & Software Development",
+          description:
+            "We develop AI-powered applications, chatbots and custom software solutions tailored for businesses, including SaaS applications, enterprise tools and scalable platforms.",
+          icon: "M12 4v16m-7-7h14",
+          color: "purple",
+        },
+        {
+          title: "Web Development",
+          description:
+            "Creating dynamic websites, web apps, and eCommerce solutions optimized for performance, security, and user experience.",
+          icon: "M3 3h18M3 9h18M3 15h18M3 21h18",
+          color: "green",
+        },
+        {
+          title: "IT Support & Services",
+          description:
+            "24/7 IT support, cloud solutions, network management, and troubleshooting to keep businesses running smoothly.",
+          icon: "M9 12h6m-3-3v6",
+          color: "yellow",
+        },
+        {
+          title: "IoT Solutions",
+          description:
+            "Smart IoT applications, device integrations, and automation solutions for industries and businesses.",
+          icon: "M12 3v18m-6-6h12",
+          color: "pink",
+        },
+        {
+          title: "Cybersecurity Consulting",
+          description:
+            "End-to-end cybersecurity solutions, VAPT, compliance, and risk assessments to protect businesses from cyber threats.",
+          icon: "M4 6h16M4 12h16m-7-6v12",
+          color: "red",
+        },
+        {
+          title: "Technical Training",
+          description:
+            "Upskill your workforce with our LMS-powered cybersecurity, IT, and AI & software development training programs.",
+          icon: "M6 18V6a2 2 0 012-2h8a2 2 0 012 2v12",
+          color: "orange",
+        },
+      ].map((feature, index) => (
+        <div
+          key={index}
+          class="group relative p-6 backdrop-blur-lg border border-gray-600/30 bg-gradient-to-b from-gray-900/60 to-gray-800/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_20px_#FF6108] slide-up"
+          style={{ animationDelay: `${index * 100}ms` }}
+        >
+          {/* Icon with Futuristic Glow */}
+          <div class="relative w-14 h-14 rounded-xl bg-gray-700/40 flex items-center justify-center mb-6 transition-all group-hover:shadow-[0_0_10px_#FF6108]">
+            <svg
+              class={`w-8 h-8 text-${feature.color}-400`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon}></path>
+            </svg>
+            <span class={`absolute inset-0 animate-pulse bg-${feature.color}-400/20 rounded-lg blur-lg opacity-50`}></span>
+          </div>
+    
+          {/* Feature Title & Description */}
+          <h3 class="text-2xl font-semibold mb-3 text-white group-hover:text-orange-400 transition-all">
+            {feature.title}
+          </h3>
+          <p class="text-gray-400 group-hover:text-gray-300 transition-all">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+</div>
+
+    <!-- CTA Button -->
+    <div class="mt-16 text-center">
+      <a href="/services" class="btn-outline-neon">
+        Learn More 
+      </a>
+    </div>
+  </div>
+</section>

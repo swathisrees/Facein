@@ -7,7 +7,7 @@
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div class="slide-up" transition:animate="slide">
         <h1 class="mb-6 text-secondary-900 dark:text-white leading-tight">
-          <span class="text-primary-600 dark:text-primary-400">Ultimate</span> coding solution<br>
+          <span class="text-primary-600 dark:text-primary-600">Ultimate</span> coding solution<br>
           for your business.
         </h1>
         <p class="text-xl text-secondary-600 dark:text-secondary-300 mb-8 max-w-lg">
@@ -27,36 +27,30 @@
         </div>
       </div>
 
-      <div class="relative black">
-        <!-- Animated Metal JPG Image -->
-        <div class="w-full max-w-lg mx-auto">
-            <img src="/src/assets/metal.png" alt="3D Metal Object" class="w-full h-auto drop-shadow-xl animate-float">
-        </div>
-    </div>
-    
-        </div>
+      <div class="relative w-full h-full flex justify-center items-center">
+        <img src="/src/assets/4-Photoroom.svg" alt="SVG 1" class="animated-svg">
+        
+        
+        
       </div>
     </div>
   </div>
-    </div>
-  </div>
 </section>
+
+
 <style>
-  img {
-    
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-}
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+
+@keyframes floatAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
-.animate-float {
-    animation: float 3s ease-in-out infinite;
+.animated-svg {
+  width: auto; /* Adjust size as needed */
+  height: auto;
+  animation: floatAnimation 3s ease-in-out infinite;
+  margin: 10px;
 }
 
 </style>
