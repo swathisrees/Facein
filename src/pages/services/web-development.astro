@@ -1,0 +1,151 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+---
+
+<Layout title="Web Development">
+  <Header />
+  <main>
+    <HeroSection 
+      title="Web " 
+      highlightText="Development"
+      description="Create stunning, responsive, and high-performance websites and web applications tailored to your business needs."
+    />
+    
+    <!-- Services Section -->
+    <section id="services" class="bg-gradient-to-b from-blue-900 to-black relative overflow-hidden">
+      <div class="container-custom relative">
+        <!-- Title -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="mb-6 text-white text-4xl font-extrabold tracking-wide">
+            Our Web Development Services
+          </h2>
+          <p class="text-gray-400 text-lg">
+            We specialize in building modern, scalable, and user-friendly websites and web applications that drive engagement and growth.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Custom Website Development",
+              description: "Design and develop bespoke websites tailored to your unique business requirements.",
+              icon: "M12 4v16m-7-7h14",
+              color: "purple",
+            },
+            {
+              title: "E-Commerce Development",
+              description: "Build secure, scalable, and user-friendly e-commerce platforms to grow your online business.",
+              icon: "M3 3h18M3 9h18M3 15h18M3 21h18",
+              color: "green",
+            },
+            {
+              title: "Web Application Development",
+              description: "Create dynamic, responsive, and feature-rich web applications for seamless user experiences.",
+              icon: "M4 6h16M4 12h16m-7-6v12",
+              color: "red",
+            },
+            {
+              title: "Content Management Systems (CMS)",
+              description: "Develop and customize CMS platforms like WordPress, Joomla, and Drupal for easy content management.",
+              icon: "M9 12h6m-3-3v6",
+              color: "yellow",
+            },
+            {
+              title: "API Development & Integration",
+              description: "Design and integrate APIs to enable seamless communication between systems and applications.",
+              icon: "M12 3v18m-6-6h12",
+              color: "pink",
+            },
+            {
+              title: "Web Maintenance & Support",
+              description: "Provide ongoing maintenance and support to ensure your website remains secure and up-to-date.",
+              icon: "M6 18V6a2 2 0 012-2h8a2 2 0 012 2v12",
+              color: "orange",
+            },
+          ].map((service, index) => (
+            <div
+              key={index}
+              class="group relative p-6 border border-gray-700/50 bg-black/50 backdrop-blur-lg rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_20px_#3B82F6] slide-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              {/* Icon with Glow */}
+              <div class="relative w-14 h-14 rounded-xl bg-gray-800/50 flex items-center justify-center mb-6 transition-all group-hover:shadow-[0_0_10px_#3B82F6]">
+                <svg
+                  class={`w-8 h-8 text-${service.color}-400`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}></path>
+                </svg>
+                <span class={`absolute inset-0 animate-pulse bg-${service.color}-400/20 rounded-lg blur-lg opacity-50`}></span>
+              </div>
+
+              {/* Service Title & Description */}
+              <h3 class="text-2xl font-semibold mb-3 text-white group-hover:text-blue-400 transition-all">
+                {service.title}
+              </h3>
+              <p class="text-gray-400 group-hover:text-gray-300 transition-all">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Custom Solutions Section -->
+        <div class="border-t border-gray-700 pt-16 mt-16">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span class="inline-block px-4 py-1 rounded-full bg-gray-800 text-blue-400 font-medium text-sm mb-4">
+                Custom Web Solutions
+              </span>
+              <h2 class="text-3xl font-bold text-white mb-6">Tailored Web Development</h2>
+              <p class="text-gray-400 mb-6">
+                We provide custom web solutions to meet your unique business needs. Our team works closely with you to design and implement web strategies that drive engagement and growth.
+              </p>
+              <div class="space-y-4 mb-8">
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="text-gray-400">Custom Web Strategy Development</p>
+                </div>
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="text-gray-400">Web Architecture Design</p>
+                </div>
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="text-gray-400">API Development & Integration</p>
+                </div>
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="text-gray-400">Ongoing Web Support & Maintenance</p>
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#" class="btn-primary">Contact Us</a>
+                <a href="#" class="btn-secondary">Request a Demo</a>
+              </div>
+            </div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

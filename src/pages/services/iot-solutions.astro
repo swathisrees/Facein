@@ -1,0 +1,151 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+---
+
+<Layout title="IoT Solutions">
+  <Header />
+  <main>
+    <HeroSection 
+      title="IoT " 
+      highlightText="Solutions"
+      description="Transform your business with cutting-edge IoT solutions that enable smart automation, real-time monitoring, and data-driven decision-making."
+    />
+    
+    <!-- Services Section -->
+    <section id="services" class="bg-gradient-to-b from-green-900 to-black relative overflow-hidden">
+      <div class="container-custom relative">
+        <!-- Title -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="mb-6 text-white text-4xl font-extrabold tracking-wide">
+            Our IoT Solutions
+          </h2>
+          <p class="text-gray-400 text-lg">
+            We specialize in building intelligent IoT systems that connect devices, collect data, and drive actionable insights for your business.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Smart Home Automation",
+              description: "Design and deploy IoT solutions for smart homes, enabling seamless control of lighting, security, and appliances.",
+              icon: "M12 4v16m-7-7h14",
+              color: "purple",
+            },
+            {
+              title: "Industrial IoT (IIoT)",
+              description: "Implement IoT solutions for industrial automation, predictive maintenance, and operational efficiency.",
+              icon: "M3 3h18M3 9h18M3 15h18M3 21h18",
+              color: "green",
+            },
+            {
+              title: "IoT for Healthcare",
+              description: "Develop IoT-enabled healthcare devices and systems for remote patient monitoring and telemedicine.",
+              icon: "M4 6h16M4 12h16m-7-6v12",
+              color: "red",
+            },
+            {
+              title: "Smart Agriculture",
+              description: "Build IoT solutions for precision farming, soil monitoring, and automated irrigation systems.",
+              icon: "M9 12h6m-3-3v6",
+              color: "yellow",
+            },
+            {
+              title: "IoT for Smart Cities",
+              description: "Create IoT systems for smart traffic management, waste management, and energy optimization in urban areas.",
+              icon: "M12 3v18m-6-6h12",
+              color: "pink",
+            },
+            {
+              title: "IoT Consulting & Strategy",
+              description: "Get expert guidance on IoT adoption, strategy, and implementation tailored to your business goals.",
+              icon: "M6 18V6a2 2 0 012-2h8a2 2 0 012 2v12",
+              color: "orange",
+            },
+          ].map((service, index) => (
+            <div
+              key={index}
+              class="group relative p-6 border border-gray-700/50 bg-black/50 backdrop-blur-lg rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_20px_#10B981] slide-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              {/* Icon with Glow */}
+              <div class="relative w-14 h-14 rounded-xl bg-gray-800/50 flex items-center justify-center mb-6 transition-all group-hover:shadow-[0_0_10px_#10B981]">
+                <svg
+                  class={`w-8 h-8 text-${service.color}-400`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}></path>
+                </svg>
+                <span class={`absolute inset-0 animate-pulse bg-${service.color}-400/20 rounded-lg blur-lg opacity-50`}></span>
+              </div>
+
+              {/* Service Title & Description */}
+              <h3 class="text-2xl font-semibold mb-3 text-white group-hover:text-green-400 transition-all">
+                {service.title}
+              </h3>
+              <p class="text-gray-400 group-hover:text-gray-300 transition-all">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Custom Solutions Section -->
+        <div class="border-t border-gray-700 pt-16 mt-16">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span class="inline-block px-4 py-1 rounded-full bg-gray-800 text-green-400 font-medium text-sm mb-4">
+                Custom IoT Solutions
+              </span>
+              <h2 class="text-3xl font-bold text-white mb-6">Tailored IoT Development</h2>
+              <p class="text-gray-400 mb-6">
+                We provide custom IoT solutions to meet your unique business needs. Our team works closely with you to design and implement IoT strategies that drive innovation and efficiency.
+              </p>
+              <div class="space-y-4 mb-8">
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="text-gray-400">Custom IoT Strategy Development</p>
+                </div>
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="text-gray-400">IoT Device Integration</p>
+                </div>
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="text-gray-400">IoT Data Analytics & Visualization</p>
+                </div>
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="text-gray-400">Ongoing IoT Support & Maintenance</p>
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#" class="btn-primary">Contact Us</a>
+                <a href="#" class="btn-secondary">Request a Demo</a>
+              </div>
+            </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

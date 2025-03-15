@@ -30,8 +30,6 @@
   p {
     @apply text-base md:text-lg leading-relaxed;
   }
-
-
 }
 
 @layer components {
@@ -64,9 +62,8 @@
   }
   
   .card {
-    @apply bg-white dark:bg-secondary-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-secondary-200 dark:border-secondary-800;
+    @apply bg-black border border-gray-700 rounded-xl shadow-md hover:shadow-orange-glow transition-shadow duration-300 overflow-hidden;
   }
-  
 
   .btn-outline-neon {
     @apply relative inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none text-orange-700 border-2 border-orange-700;
@@ -85,6 +82,13 @@
   .btn-outline-neon:hover {
     text-shadow: 0 0 8px #f74c09;
     box-shadow: 0px 0px 10px rgba(255, 97, 8, 0.8);
+  }
+}
+
+@layer utilities {
+  /* Define the shadow-orange-glow utility */
+  .shadow-orange-glow {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
   }
 }
 
@@ -119,55 +123,54 @@
   @apply outline-none ring-2 ring-primary-500 dark:ring-primary-400;
 }
 
-  .futuristic-svg {
-    transition: transform 0.5s ease, filter 0.3s ease;
-  }
+.futuristic-svg {
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
 
-  /* Glow Effect on Hover */
-  .futuristic-svg:hover {
-    filter: drop-shadow(0 0 15px rgba(255, 97, 8, 0.8));
-  }
+/* Glow Effect on Hover */
+.futuristic-svg:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 97, 8, 0.8));
+}
 
-  /* Rotating Effect */
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  .fade-in svg {
-    animation: float 6s ease-in-out infinite;
-  }
+/* Rotating Effect */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
-  @keyframes scroll {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-  
-  .animate-scroll {
-    display:flex;
-    animation: scroll 30s linear infinite;
-    width: max-content;
-  }
+.fade-in svg {
+  animation: float 6s ease-in-out infinite;
+}
 
-  .slide-up {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideUp 0.8s ease-out forwards;
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
   }
-  @keyframes slideUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  to {
+    transform: translateX(-100%);
   }
+}
 
+.animate-scroll {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
 
-  
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease-out forwards;
+}
 
-  @keyframes floatAround {
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatAround {
   0% { transform: translate(0, 0) rotate(0deg); opacity: 0.9; }
   25% { transform: translate(20px, -25px) rotate(45deg); opacity: 0.6; }
   50% { transform: translate(-15px, 30px) rotate(90deg); opacity: 0.8; }
@@ -175,39 +178,55 @@
   100% { transform: translate(0, 0) rotate(180deg); opacity: 1; }
 }
 
-  
-  .particle {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(4px);
-    animation: floatAround 5s linear infinite alternate;
-  }
-  
-  .particle:nth-child(1) { width: 6px; height: 6px; top: 30%; left: 20%; animation: floatAround 4s infinite linear; }
-  .particle:nth-child(2) { width: 8px; height: 8px; top: 40%; left: 60%; animation: floatAround 4s infinite linear; }
-  .particle:nth-child(3) { width: 9px; height:9px; bottom: 20%; right: 20%; animation: floatAround 4s infinite linear; }
-  .particle:nth-child(4) { width: 7px; height: 7px; top: 15%; right: 30%; animation: floatAround 4s infinite linear; }
-  .particle:nth-child(5) { width: 6px; height: 6px; bottom: 30%; left: 40%; animation: floatAround 4s infinite linear; }
-  
-  .animated-svg {
-    width: auto;
-    position: relative;
-    z-index: 10;
-  }
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(4px);
+  animation: floatAround 5s linear infinite alternate;
+}
 
+.particle:nth-child(1) { width: 6px; height: 6px; top: 30%; left: 20%; animation: floatAround 4s infinite linear; }
+.particle:nth-child(2) { width: 8px; height: 8px; top: 40%; left: 60%; animation: floatAround 4s infinite linear; }
+.particle:nth-child(3) { width: 9px; height: 9px; bottom: 20%; right: 20%; animation: floatAround 4s infinite linear; }
+.particle:nth-child(4) { width: 7px; height: 7px; top: 15%; right: 30%; animation: floatAround 4s infinite linear; }
+.particle:nth-child(5) { width: 6px; height: 6px; bottom: 30%; left: 40%; animation: floatAround 4s infinite linear; }
 
-            .card {
-              position: relative;
-              overflow: hidden;
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-              background: rgba(31, 13, 13, 0.05);
-              backdrop-filter: blur(10px);
-              border-radius: 12px;
-              border: 1px solid rgba(255, 97, 8, 0.5);
-            }
-          
-            .card:hover {
-              transform: scale(1.03);
-              box-shadow: 0 4px 12px rgba(255, 97, 8, 0.3);
-            }
-          
+.animated-svg {
+  width: auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Terminal Emulation Styles */
+.terminal {
+  background-color: #1e1e1e;
+  color: #00ff00;
+  font-family: monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.terminal .prompt {
+  color: #00ff00;
+}
+
+.terminal .command {
+  color: #ffffff;
+}
+
+.terminal .output {
+  color: #00ff00;
+}
+
+.terminal .error {
+  color: #ff0000;
+}
+
+.terminal .info {
+  color: #00ffff;
+}
+
+.terminal .highlight {
+  color: #ffa500;
+}
