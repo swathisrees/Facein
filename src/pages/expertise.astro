@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="FaceIn Services ">
+<Layout title="FaceIn Services">
   <Header />
   <main>
     <!-- Hero Section -->
@@ -12,24 +12,24 @@ import Footer from '../components/Footer.astro';
       <div class="absolute inset-0 z-0 opacity-30">
         <div class="absolute inset-0 bg-grid-pattern"></div>
       </div>
-      
+
       <div class="container-custom relative z-10 text-center max-w-3xl mx-auto px-4">
         <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 text-gray-900 dark:text-white animate-slide-down">
           Comprehensive IT & Cybersecurity Solutions
         </h1>
         <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 md:mb-8 animate-slide-up">
-          Facein provides cutting-edge cybersecurity, IT support, AI development, and software solutions to help businesses thrive in the digital age.
+          FaceIn provides cutting-edge cybersecurity, IT support, AI development, and software solutions to help businesses thrive in the digital age.
         </p>
       </div>
     </section>
 
     <!-- Services Section -->
-    <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-10 text-center">
+    <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-10 text-center px-4">
       {[
         {
           title: "Software Development",
           description:
-            "We develop AI-powered applications, chatbots and custom software solutions tailored for businesses, including SaaS applications, enterprise tools and scalable platforms.",
+            "We develop AI-powered applications, chatbots, and custom software solutions tailored for businesses, including SaaS applications, enterprise tools, and scalable platforms.",
           icon: "M12 4v16m-7-7h14",
           color: "purple",
         },
@@ -68,14 +68,14 @@ import Footer from '../components/Footer.astro';
           icon: "M12 3v18m-6-6h12",
           color: "pink",
         },
-        
       ].map((feature, index) => (
-        <div
+        <a
           key={index}
-          class="group relative w-90 h-80 flex flex-col justify-center items-center p-6 backdrop-blur-lg border border-gray-600/30 bg-gradient-to-b from-gray-900/60 to-gray-800/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_20px_#FF6108] slide-up"
+          href={`/services/${feature.title.toLowerCase().replace(/\s+/g, "-")}`}
+          class="group relative w-90 h-80 flex flex-col justify-center items-center p-6 backdrop-blur-lg border border-gray-600/30 bg-gradient-to-b from-gray-900/60 to-gray-800/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_20px_#FF6108] slide-up cursor-pointer"
           style={{ animationDelay: `${index * 100}ms` }}
         >
-          {/* Icon with Futuristic Glow */}
+          <!-- Icon with Glow Effect -->
           <div class="relative w-14 h-14 rounded-xl bg-gray-700/40 flex items-center justify-center mb-6 transition-all group-hover:shadow-[0_0_10px_#FF6108]">
             <svg
               class={`w-8 h-8 text-${feature.color}-400`}
@@ -88,17 +88,17 @@ import Footer from '../components/Footer.astro';
             </svg>
             <span class={`absolute inset-0 animate-pulse bg-${feature.color}-400/20 rounded-lg blur-lg opacity-50`}></span>
           </div>
-    
-          {/* Feature Title & Description */}
+
+          <!-- Feature Title & Description -->
           <h3 class="text-2xl font-semibold mb-3 text-white group-hover:text-orange-400 transition-all">
             {feature.title}
           </h3>
           <p class="text-gray-400 group-hover:text-gray-300 transition-all">
             {feature.description}
           </p>
-        </div>
+        </a>
       ))}
-</div>
+    </div>
 
     <!-- CTA Section -->
     <section class="cta-section py-12 md:py-16 text-center">
@@ -113,4 +113,3 @@ import Footer from '../components/Footer.astro';
   </main>
   <Footer />
 </Layout>
-
