@@ -194,3 +194,20 @@
     position: relative;
     z-index: 10;
   }
+
+
+            .card {
+              position: relative;
+              overflow: hidden;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              background: rgba(31, 13, 13, 0.05);
+              backdrop-filter: blur(10px);
+              border-radius: 12px;
+              border: 1px solid rgba(255, 97, 8, 0.5);
+            }
+          
+            .card:hover {
+              transform: scale(1.03);
+              box-shadow: 0 4px 12px rgba(255, 97, 8, 0.3);
+            }
+          
