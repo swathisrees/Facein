@@ -3,7 +3,8 @@
   position: relative;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  will-change: opacity, transform; /* Optimize for animations */
 }
 
 .page-loaded {
@@ -69,7 +70,7 @@ footer {
 
 .slide-left-enter-active {
   transform: translateX(0);
-  transition: transform 0.5s ease-out;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slide-left-exit {
@@ -78,7 +79,7 @@ footer {
 
 .slide-left-exit-active {
   transform: translateX(-100%);
-  transition: transform 0.5s ease-in;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slide-right-enter {
@@ -87,7 +88,7 @@ footer {
 
 .slide-right-enter-active {
   transform: translateX(0);
-  transition: transform 0.5s ease-out;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slide-right-exit {
@@ -96,5 +97,5 @@ footer {
 
 .slide-right-exit-active {
   transform: translateX(100%);
-  transition: transform 0.5s ease-in;
-} 
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
