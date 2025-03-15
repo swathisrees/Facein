@@ -18,13 +18,13 @@ import Footer from '../components/Footer.astro';
           Comprehensive IT & Cybersecurity Solutions
         </h1>
         <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 md:mb-8 animate-slide-up">
-          FaceIn provides cutting-edge cybersecurity, IT support, AI development, and software solutions to help businesses thrive in the digital age.
+          Facein provides cutting-edge cybersecurity, IT support, AI development, and software solutions to help businesses thrive in the digital age.
         </p>
       </div>
     </section>
 
     <!-- Services Section -->
-    <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-10">
+    <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-10 text-center">
       {[
         {
           title: "Software Development",
@@ -39,6 +39,13 @@ import Footer from '../components/Footer.astro';
             "Creating dynamic websites, web apps, and eCommerce solutions optimized for performance, security, and user experience.",
           icon: "M3 3h18M3 9h18M3 15h18M3 21h18",
           color: "green",
+        },
+        {
+          title: "Cybersecurity Consulting",
+          description:
+            "End-to-end cybersecurity solutions, VAPT, compliance, and risk assessments to protect businesses from cyber threats.",
+          icon: "M4 6h16M4 12h16m-7-6v12",
+          color: "red",
         },
         {
           title: "AI Development",
@@ -61,13 +68,7 @@ import Footer from '../components/Footer.astro';
           icon: "M12 3v18m-6-6h12",
           color: "pink",
         },
-        {
-          title: "Cybersecurity Consulting",
-          description:
-            "End-to-end cybersecurity solutions, VAPT, compliance, and risk assessments to protect businesses from cyber threats.",
-          icon: "M4 6h16M4 12h16m-7-6v12",
-          color: "red",
-        },
+        
       ].map((feature, index) => (
         <div
           key={index}
