@@ -67,9 +67,9 @@
 
   .btn-outline-neon {
     @apply relative inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none text-orange-700 border-2 border-orange-700;
-    overflow: hidden;
+    overflow: hidden;  
   }
-
+  
   .btn-outline-neon::before {
     content: "";
     @apply absolute inset-0 rounded-lg;
