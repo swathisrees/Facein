@@ -39,8 +39,62 @@
     </div>
   </div>
 </div>-->
+---
+import { ShieldCheck, Code, BrainCircuit, Headphones, Rss, BookOpen } from "lucide-astro";
 
-
+const features = [
+        
+        {
+          title: "Cybersecurity",
+          description:
+            "End-to-end cybersecurity solutions, VAPT, compliance, and risk assessments to protect businesses from cyber threats.",
+            icon: ShieldCheck,
+            color: "text-purple-400",
+            glow: "shadow-purple-500",
+          
+        },
+        {
+          title: "Web Development",
+          description:
+          "Creating dynamic websites, web apps, and eCommerce solutions optimized for performance, security, and user experience.",
+          icon: Code,
+          color: "text-green-400",
+          glow: "shadow-green-500",
+        },
+        {
+          title: "AI & Software Development",
+          description:
+            "We build AI-powered apps, chatbots, and custom software, including SaaS, enterprise tools, and scalable platforms.",
+            icon: BrainCircuit,
+            color: "text-red-400",
+            glow: "shadow-red-500",
+        },
+        {
+          title: "IT Support & Services",
+          description:
+            "24/7 IT support, cloud solutions, network management, and troubleshooting to keep businesses running smoothly.",
+            icon: Headphones,
+            color: "text-yellow-400",
+            glow: "shadow-yellow-500",
+        },
+        {
+          title: "IoT Solutions",
+          description:
+            "Smart IoT applications, device integrations, and automation solutions for industries and businesses.",
+            icon: Rss,
+            color: "text-pink-400",
+            glow: "shadow-pink-500",
+        },
+        {
+          title: "Technical Training",
+          description:
+            "Upskill your workforce with our LMS-powered cybersecurity, IT, and AI & software development training programs.",
+            icon: BookOpen,
+            color: "text-orange-400",
+            glow: "shadow-orange-500",
+        },
+      ]
+---
 <section id="features" class="section pt-20 pb-20 md:pt-10 md:pb-15 bg-gray-900/80 dark:bg-gray-950/90 relative overflow-hidden">
   <!-- Neon Glow Background Overlay -->
   <div class="absolute inset-0 pointer-events-none">
@@ -62,69 +116,19 @@
 
     <!-- Features Grid -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {[
-        {
-          title: "Cybersecurity",
-          description:
-            "End-to-end cybersecurity solutions, VAPT, compliance, and risk assessments to protect businesses from cyber threats.",
-          icon: "M12 4v16m-7-7h14",
-          color: "purple",
-          
-        },
-        {
-          title: "Web Development",
-          description:
-            "Creating dynamic websites, web apps, and eCommerce solutions optimized for performance, security, and user experience.",
-          icon: "M3 3h18M3 9h18M3 15h18M3 21h18",
-          color: "green",
-        },
-        {
-          title: "AI & Software Development",
-          description:
-            "We build AI-powered apps, chatbots, and custom software, including SaaS, enterprise tools, and scalable platforms.",
-            icon: "M4 6h16M4 12h16m-7-6v12",
-          color: "red",
-        },
-        {
-          title: "IT Support & Services",
-          description:
-            "24/7 IT support, cloud solutions, network management, and troubleshooting to keep businesses running smoothly.",
-          icon: "M9 12h6m-3-3v6",
-          color: "yellow",
-        },
-        {
-          title: "IoT Solutions",
-          description:
-            "Smart IoT applications, device integrations, and automation solutions for industries and businesses.",
-          icon: "M12 3v18m-6-6h12",
-          color: "pink",
-        },
-        {
-          title: "Technical Training",
-          description:
-            "Upskill your workforce with our LMS-powered cybersecurity, IT, and AI & software development training programs.",
-          icon: "M6 18V6a2 2 0 012-2h8a2 2 0 012 2v12",
-          color: "orange",
-        },
-      ].map((feature, index) => (
+      { features.map((feature, index) => (
         <div
           key={index}
           class="group relative p-6 backdrop-blur-lg border border-gray-600/30 bg-gradient-to-b from-gray-900/60 to-gray-800/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_20px_#FF6108] slide-up"
           style={{ animationDelay: `${index * 100}ms` }}
         >
           {/* Icon with Futuristic Glow */}
-          <div class="relative w-14 h-14 rounded-xl bg-gray-700/40 flex items-center justify-center mb-6 transition-all group-hover:shadow-[0_0_10px_#FF6108]">
-            <svg
-              class={`w-8 h-8 text-${feature.color}-400`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon}></path>
-            </svg>
-            <span class={`absolute inset-0 animate-pulse bg-${feature.color}-400/20 rounded-lg blur-lg opacity-50`}></span>
-          </div>
+          <div
+        class={`w-14 h-14 flex items-center justify-center mb-6 rounded-lg bg-gray-800/50 ${feature.color} transition-all 
+        group-hover:scale-110 group-hover:shadow-md ${feature.glow}`}
+      >
+        <feature.icon size={50} stroke-width={1.5} />
+      </div>
     
           {/* Feature Title & Description */}
           <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-orange-400 transition-all">

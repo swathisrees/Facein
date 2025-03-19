@@ -13,6 +13,7 @@
     "@astrojs/alpinejs": "^0.4.3",
     "@astrojs/tailwind": "^6.0.0",
     "alpinejs": "^3.13.5",
-    "astro": "^5.4.3"
+    "astro": "^5.4.3",
+    "lucide-astro": "^0.483.0"
   }
 }
