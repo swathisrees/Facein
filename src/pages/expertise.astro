@@ -2,6 +2,52 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Code, ShieldCheck, Monitor, Headphones, Rss, BrainCircuit } from "lucide-astro";
+
+const features = [
+  {
+    title: "Software Development",
+    description:
+      "We develop AI-powered applications, chatbots, and custom software solutions tailored for businesses, including SaaS applications, enterprise tools, and scalable platforms.",
+    icon: Code,
+    color: "purple",
+  },
+  {
+    title: "Web Development",
+    description:
+      "Creating dynamic websites, web apps, and eCommerce solutions optimized for performance, security, and user experience.",
+    icon: Monitor,
+    color: "green",
+  },
+  {
+    title: "Cybersecurity Consulting",
+    description:
+      "End-to-end cybersecurity solutions, VAPT, compliance, and risk assessments to protect businesses from cyber threats.",
+    icon: ShieldCheck,
+    color: "red",
+  },
+  {
+    title: "AI Development",
+    description:
+      "Leverage AI-driven automation, machine learning models, and predictive analytics for your business growth.",
+    icon: BrainCircuit,
+    color: "black",
+  },
+  {
+    title: "IT Support & Services",
+    description:
+      "24/7 IT support, cloud solutions, network management, and troubleshooting to keep businesses running smoothly.",
+    icon: Headphones,
+    color: "yellow",
+  },
+  {
+    title: "IoT Solutions",
+    description:
+      "Smart IoT applications, device integrations, and automation solutions for industries and businesses.",
+    icon: Rss,
+    color: "pink",
+  },
+];
 ---
 
 <Layout title="Facein Services">
@@ -23,73 +69,27 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <!-- Services Section -->
-    <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-10 text-center px-4">
-      {[
-        {
-          title: "Software Development",
-          description:
-            "We develop AI-powered applications, chatbots, and custom software solutions tailored for businesses, including SaaS applications, enterprise tools, and scalable platforms.",
-          icon: "M12 4v16m-7-7h14",
-          color: "purple",
-        },
-        {
-          title: "Web Development",
-          description:
-            "Creating dynamic websites, web apps, and eCommerce solutions optimized for performance, security, and user experience.",
-          icon: "M3 3h18M3 9h18M3 15h18M3 21h18",
-          color: "green",
-        },
-        {
-          title: "Cybersecurity Consulting",
-          description:
-            "End-to-end cybersecurity solutions, VAPT, compliance, and risk assessments to protect businesses from cyber threats.",
-          icon: "M4 6h16M4 12h16m-7-6v12",
-          color: "red",
-        },
-        {
-          title: "AI Development",
-          description:
-            "Leverage AI-driven automation, machine learning models, and predictive analytics for your business growth.",
-          icon: "M3 3h18M3 9h18M3 21h18",
-          color: "black",
-        },
-        {
-          title: "IT Support & Services",
-          description:
-            "24/7 IT support, cloud solutions, network management, and troubleshooting to keep businesses running smoothly.",
-          icon: "M9 12h6m-3-3v6",
-          color: "yellow",
-        },
-        {
-          title: "IoT Solutions",
-          description:
-            "Smart IoT applications, device integrations, and automation solutions for industries and businesses.",
-          icon: "M12 3v18m-6-6h12",
-          color: "pink",
-        },
-      ].map((feature, index) => (
+<!-- Services Section -->
+<section id="services" class="section pt-20 pb-20 md:pt-15 md:pb-15 bg-gray-900/80 dark:bg-gray-950/90 relative overflow-hidden">
+  <div class="container-custom relative">
+    <!-- Features Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {features.map((feature, index) => (
         <a
           key={index}
           href={`/services/${feature.title.toLowerCase().replace(/\s+/g, "-")}`}
-          class="group relative w-90 h-80 flex flex-col justify-center items-center p-6 backdrop-blur-lg border border-gray-600/30 bg-gradient-to-b from-gray-900/60 to-gray-800/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_20px_#FF6108] slide-up cursor-pointer"
+          class="group relative p-6 backdrop-blur-lg border border-gray-600/30 bg-gradient-to-b from-gray-900/60 to-gray-800/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_20px_#FF6108] slide-up"
           style={{ animationDelay: `${index * 100}ms` }}
         >
-          <!-- Icon with Glow Effect -->
-          <div class="relative w-14 h-14 rounded-xl bg-gray-700/40 flex items-center justify-center mb-6 transition-all group-hover:shadow-[0_0_10px_#FF6108]">
-            <svg
-              class={`w-8 h-8 text-${feature.color}-400`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon}></path>
-            </svg>
+          {/* Icon with Glow Effect */}
+          <div
+            class={`relative w-14 h-14 rounded-xl bg-gray-700/40 flex items-center justify-center mb-6 transition-all group-hover:scale-110 group-hover:shadow-md shadow-[${feature.color}-500]`}
+          >
+            <feature.icon size={50} stroke-width={1.5} class={`text-${feature.color}-400`} />
             <span class={`absolute inset-0 animate-pulse bg-${feature.color}-400/20 rounded-lg blur-lg opacity-50`}></span>
           </div>
 
-          <!-- Feature Title & Description -->
+          {/* Feature Title & Description */}
           <h3 class="text-2xl font-semibold mb-3 text-white group-hover:text-orange-400 transition-all">
             {feature.title}
           </h3>
@@ -110,6 +110,9 @@ import Footer from '../components/Footer.astro';
         <a href="/contact" class="btn-primary px-6 py-3">Contact Us</a>
       </div>
     </section>
-  </main>
-  <Footer />
+  </div>
+</section>
+
+</main>
+<Footer />
 </Layout>
