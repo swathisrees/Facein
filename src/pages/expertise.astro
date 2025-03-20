@@ -11,6 +11,7 @@ const features = [
       "We develop AI-powered applications, chatbots, and custom software solutions tailored for businesses, including SaaS applications, enterprise tools, and scalable platforms.",
     icon: Code,
     color: "purple",
+    hoverColor: "#14B8A6", // Teal
   },
   {
     title: "Web Development",
@@ -18,6 +19,7 @@ const features = [
       "Creating dynamic websites, web apps, and eCommerce solutions optimized for performance, security, and user experience.",
     icon: Monitor,
     color: "green",
+    hoverColor: "#EF4444", // Red
   },
   {
     title: "Cybersecurity Consulting",
@@ -25,6 +27,7 @@ const features = [
       "End-to-end cybersecurity solutions, VAPT, compliance, and risk assessments to protect businesses from cyber threats.",
     icon: ShieldCheck,
     color: "red",
+    hoverColor: "#FF6108", // Orange
   },
   {
     title: "AI Development",
@@ -32,6 +35,7 @@ const features = [
       "Leverage AI-driven automation, machine learning models, and predictive analytics for your business growth.",
     icon: BrainCircuit,
     color: "black",
+    hoverColor: "#3B82F6", // Blue
   },
   {
     title: "IT Support & Services",
@@ -39,6 +43,7 @@ const features = [
       "24/7 IT support, cloud solutions, network management, and troubleshooting to keep businesses running smoothly.",
     icon: Headphones,
     color: "yellow",
+    hoverColor: "#6366F1", // Indigo
   },
   {
     title: "IoT Solutions",
@@ -46,6 +51,7 @@ const features = [
       "Smart IoT applications, device integrations, and automation solutions for industries and businesses.",
     icon: Rss,
     color: "pink",
+    hoverColor: "#10B981", // Green
   },
 ];
 ---
@@ -69,50 +75,58 @@ const features = [
       </div>
     </section>
 
-<!-- Services Section -->
-<section id="services" class="section pt-20 pb-20 md:pt-15 md:pb-15 bg-gray-900/80 dark:bg-gray-950/90 relative overflow-hidden">
-  <div class="container-custom relative">
-    <!-- Features Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {features.map((feature, index) => (
-        <a
-          key={index}
-          href={`/services/${feature.title.toLowerCase().replace(/\s+/g, "-")}`}
-          class="group relative p-6 backdrop-blur-lg border border-gray-600/30 bg-gradient-to-b from-gray-900/60 to-gray-800/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_20px_#FF6108] slide-up"
-          style={{ animationDelay: `${index * 100}ms` }}
-        >
-          {/* Icon with Glow Effect */}
-          <div
-            class={`relative w-14 h-14 rounded-xl bg-gray-700/40 flex items-center justify-center mb-6 transition-all group-hover:scale-110 group-hover:shadow-md shadow-[${feature.color}-500]`}
-          >
-            <feature.icon size={50} stroke-width={1.5} class={`text-${feature.color}-400`} />
-            <span class={`absolute inset-0 animate-pulse bg-${feature.color}-400/20 rounded-lg blur-lg opacity-50`}></span>
+    <!-- Services Section -->
+    <section id="services" class="section pt-20 pb-20 md:pt-15 md:pb-15 bg-gray-900/80 dark:bg-gray-950/90 relative overflow-hidden">
+      <div class="container-custom relative">
+        <!-- Features Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {features.map((feature, index) => (
+            <a
+              key={index}
+              href={`/services/${feature.title.toLowerCase().replace(/\s+/g, "-")}`}
+              class="group relative p-6 backdrop-blur-lg border border-gray-600/30 bg-gradient-to-b from-gray-900/60 to-gray-800/10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 slide-up"
+              style={{ animationDelay: `${index * 100}ms`, "--hover-color": feature.hoverColor }}
+            >
+              {/* Icon with Glow Effect */}
+              <div
+                class={`relative w-14 h-14 rounded-xl bg-gray-700/40 flex items-center justify-center mb-6 transition-all group-hover:scale-110 group-hover:shadow-md shadow-[${feature.color}-500]`}
+              >
+                <feature.icon
+                  size={50}
+                  stroke-width={1.5}
+                  class={`text-${feature.color}-400 group-hover:text-[var(--hover-color)] transition-all`}
+                />
+                <span class={`absolute inset-0 animate-pulse bg-${feature.color}-400/20 rounded-lg blur-lg opacity-50`}></span>
+              </div>
+
+              {/* Feature Title */}
+              <h3 class="text-2xl font-semibold mb-3 text-white group-hover:text-[var(--hover-color)] transition-all">
+                {feature.title}
+              </h3>
+
+              {/* Feature Description */}
+              <p class="text-gray-400 transition-all">
+                {feature.description}
+              </p>
+
+              {/* Hover Blur Effect */}
+              <div class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="box-shadow: 0 0 20px var(--hover-color);"></div>
+            </a>
+          ))}
+        </div>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-12 md:py-16 text-center">
+          <div class="container-custom">
+            <h2 class="text-2xl md:text-3xl mb-4 text-gray-900 dark:text-white">Let's Work Together</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              Get in touch to discuss how Facein can help your business grow.
+            </p>
+            <a href="/contact" class="btn-primary px-6 py-3">Contact Us</a>
           </div>
-
-          {/* Feature Title & Description */}
-          <h3 class="text-2xl font-semibold mb-3 text-white group-hover:text-orange-400 transition-all">
-            {feature.title}
-          </h3>
-          <p class="text-gray-400 group-hover:text-gray-300 transition-all">
-            {feature.description}
-          </p>
-        </a>
-      ))}
-    </div>
-
-    <!-- CTA Section -->
-    <section class="cta-section py-12 md:py-16 text-center">
-      <div class="container-custom">
-        <h2 class="text-2xl md:text-3xl mb-4 text-gray-900 dark:text-white">Let's Work Together</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-          Get in touch to discuss how Facein Technologies can help your business grow.
-        </p>
-        <a href="/contact" class="btn-primary px-6 py-3">Contact Us</a>
+        </section>
       </div>
     </section>
-  </div>
-</section>
-
-</main>
-<Footer />
+  </main>
+  <Footer />
 </Layout>
