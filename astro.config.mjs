@@ -6,8 +6,13 @@ import alpinejs from '@astrojs/alpinejs';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://facein.in', 
+  
   integrations: [
     tailwind(),
     alpinejs()
   ]
+  
+     
+    
+ 
 });
