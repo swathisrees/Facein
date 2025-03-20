@@ -23,13 +23,21 @@ import HeroSection from '../components/HeroSection.astro';
 
         <div class="grid md:grid-cols-3 gap-12">
           <!-- Course Cards -->
-          {["Full-Stack Web Development", "Cybersecurity & Ethical Hacking", "Artificial Intelligence & Machine Learning"].map((course, index) => (
+          {[
+            "Full-Stack Web Development",
+            "Cybersecurity & Ethical Hacking",
+            "Artificial Intelligence & Machine Learning",
+            "Data Science",
+            "Data Analytics"
+          ].map((course, index) => (
             <div key={index} class="course-card relative overflow-hidden p-6 rounded-2xl">
               <h3 class="text-2xl font-semibold text-white mb-4">{course}</h3>
               <p class="text-gray-200 mb-6">
                 {index === 0 && "Learn the latest web technologies and build powerful web applications."}
                 {index === 1 && "Master cybersecurity techniques and become an ethical hacker."}
                 {index === 2 && "Dive into the world of AI and build intelligent systems."}
+                {index === 3 && "Master data science techniques to analyze and interpret complex data."}
+                {index === 4 && "Learn data analytics tools and techniques to make data-driven decisions."}
               </p>
               <ul class="text-gray-300 mb-6 space-y-2">
                 {index === 0 && (
@@ -51,6 +59,20 @@ import HeroSection from '../components/HeroSection.astro';
                     <li>Deep Learning & Neural Networks</li>
                     <li>Hands-on Projects</li>
                     <li>Expert Mentorship</li>
+                  </>
+                )}
+                {index === 3 && (
+                  <>
+                    <li>Data Visualization</li>
+                    <li>Machine Learning Integration</li>
+                    <li>Real-World Case Studies</li>
+                  </>
+                )}
+                {index === 4 && (
+                  <>
+                    <li>Data Cleaning & Preparation</li>
+                    <li>Statistical Analysis</li>
+                    <li>Business Intelligence Tools</li>
                   </>
                 )}
               </ul>
