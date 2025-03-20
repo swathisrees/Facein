@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import { Cpu, BrainCircuit, MessageCircle, Eye, Cctv, BookOpen } from 'lucide-astro';
 ---
 
 <Layout title="AI Development">
@@ -15,50 +16,48 @@ import HeroSection from '../../components/HeroSection.astro';
     />
     
     <!-- Services Section -->
-    <section class="py-16 bg-gray-900/80 dark:bg-gray-950/90  backdrop-saturate-150 rounded-xl shadow-lg">
+    <section class="py-16 bg-gray-900/80 dark:bg-gray-950/90 backdrop-saturate-150 rounded-xl shadow-lg">
       <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-10 left-20 w-96 h-96  bg-blue-500 blur-[120px] opacity-20"></div>
-        
+        <div class="absolute top-10 left-20 w-96 h-96 bg-blue-500 blur-[120px] opacity-20"></div>
       </div>
-      <div class="container-custom relative ">
-
+      <div class="container-custom relative">
         <!-- Services Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               title: "AI-Powered Applications",
               description: "Develop custom AI applications to automate processes, enhance decision-making, and improve user experiences.",
-              icon: "M12 4v16m-7-7h14",
+              icon: Cpu,
               color: "purple",
             },
             {
               title: "Machine Learning Models",
               description: "Design and deploy machine learning models for predictive analytics, natural language processing, and more.",
-              icon: "M3 3h18M3 9h18M3 15h18M3 21h18",
+              icon: BrainCircuit,
               color: "green",
             },
             {
               title: "AI Chatbots & Virtual Assistants",
               description: "Create intelligent chatbots and virtual assistants to streamline customer support and engagement.",
-              icon: "M4 6h16M4 12h16m-7-6v12",
+              icon: MessageCircle,
               color: "red",
             },
             {
               title: "Computer Vision Solutions",
               description: "Build computer vision systems for image recognition, object detection, and video analysis.",
-              icon: "M9 12h6m-3-3v6",
+              icon: Eye,
               color: "yellow",
             },
             {
               title: "AI for IoT",
               description: "Integrate AI with IoT devices to enable smart automation and real-time data analysis.",
-              icon: "M12 3v18m-6-6h12",
+              icon: Cctv,
               color: "pink",
             },
             {
               title: "AI Consulting & Strategy",
               description: "Get expert guidance on AI adoption, strategy, and implementation tailored to your business goals.",
-              icon: "M6 18V6a2 2 0 012-2h8a2 2 0 012 2v12",
+              icon: BookOpen,
               color: "orange",
             },
           ].map((service, index) => (
@@ -69,15 +68,7 @@ import HeroSection from '../../components/HeroSection.astro';
             >
               {/* Icon with Glow */}
               <div class="relative w-14 h-14 rounded-xl bg-gray-800/50 flex items-center justify-center mb-6 transition-all group-hover:shadow-[0_0_10px_#3B82F6]">
-                <svg
-                  class={`w-8 h-8 text-${service.color}-400`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}></path>
-                </svg>
+                <service.icon class={`w-8 h-8 text-${service.color}-400`} />
                 <span class={`absolute inset-0 animate-pulse bg-${service.color}-400/20 rounded-lg blur-lg opacity-50`}></span>
               </div>
 
@@ -132,10 +123,6 @@ import HeroSection from '../../components/HeroSection.astro';
               <div class="flex flex-col sm:flex-row gap-4">
                 <a href="/contact" class="btn-primary">Contact Us</a>
                 <a href="mailto:info@facein.in" class="btn-outline-neon" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info@facein.in', '_blank'); return false;">Request a Demo</a>
-
-              </div>
-            </div>
- 
               </div>
             </div>
           </div>
