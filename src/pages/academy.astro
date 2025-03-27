@@ -28,7 +28,8 @@ import HeroSection from '../components/HeroSection.astro';
             "Cybersecurity & Ethical Hacking",
             "Artificial Intelligence & Machine Learning",
             "Data Science",
-            "Data Analytics"
+            "Data Analytics",
+            "Mobile App Development"
           ].map((course, index) => (
             <div key={index} class="course-card relative overflow-hidden p-6 rounded-2xl">
               <h3 class="text-2xl font-semibold text-white mb-4">{course}</h3>
@@ -38,6 +39,7 @@ import HeroSection from '../components/HeroSection.astro';
                 {index === 2 && "Dive into the world of AI and build intelligent systems."}
                 {index === 3 && "Master data science techniques to analyze and interpret complex data."}
                 {index === 4 && "Learn data analytics tools and techniques to make data-driven decisions."}
+                {index === 5 && "Build native and cross-platform mobile applications for iOS and Android."}
               </p>
               <ul class="text-gray-300 mb-6 space-y-2">
                 {index === 0 && (
@@ -75,13 +77,24 @@ import HeroSection from '../components/HeroSection.astro';
                     <li>Business Intelligence Tools</li>
                   </>
                 )}
+                {index === 5 && (
+                  <>
+                    <li>Native & Cross-Platform Development</li>
+                    <li>UI/UX Design for Mobile</li>
+                    <li>App Store Deployment</li>
+                  </>
+                )}
               </ul>
-              
-              {/* Edit the view course button in later. */}
-              {/* <a href="#" class="btn-outline-neon">View Course</a> */}
+              <a 
+                href={`https://api.whatsapp.com/send?phone=916282391223&text=I'm interested in enrolling in the ${course} course!`}
+                target="_blank"
+                class="btn-enroll inline-block px-6 py-2 rounded-full bg-[#25D366] text-white font-semibold hover:bg-[#20BD5A] transition-colors duration-300 relative z-10"
+              >
+                Enroll Now
+              </a>
 
               <!-- Animated Neon Glow Effect -->
-              <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#ff6108] to-[#ff914d] opacity-10 transition-opacity duration-500 group-hover:opacity-40"></div>
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#ff6108] to-[#ff914d] opacity-10 transition-opacity duration-500 group-hover:opacity-40 z-0"></div>
             </div>
           ))}
         </div>
@@ -102,10 +115,14 @@ import HeroSection from '../components/HeroSection.astro';
 
 .course-card::before {
   content: "";
-  @apply absolute inset-0 bg-gradient-to-r from-white/5 to-white/0 opacity-0 transition-opacity duration-500;
+  @apply absolute inset-0 bg-gradient-to-r from-white/5 to-white/0 opacity-0 transition-opacity duration-500 z-0;
 }
 
 .course-card:hover::before {
   @apply opacity-20;
+}
+
+.btn-enroll {
+  @apply text-center;
 }
 </style>
